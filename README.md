@@ -1,46 +1,22 @@
-# Getting Started with Create React App
+# Geodesic Controller Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a basic React App with a simple controller. It is designed for mobile, and is made to be responsive using material-design layouts.
 
-## Available Scripts
+This connects to a [nodejs WebSocket server](https://github.com/Bowbee/GeoNodeServer).
+The data is logged out by the server (but can be echoed back with a little extra effort).
 
-In the project directory, you can run:
+## How to use
 
-### `yarn start`
+1. Clone the repo.
+2. run `yarn install` from the command line.
+3. run `yarn start` from the command line.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The frontend should start (in debug mode) in a seperate browser window.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `yarn test`
+#### Note:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Connecting to the **on your network** IP from another device will not work, as the websocket port is not forwarded by default. Using ngrok for testing on other devices is recommended. See the nodejs server readme for more details.
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+You can enable verbose logging to view what is being sent. To do this, modify the boolean in `src/config.js` to true. This is disabled by default as browser logging on tick is notoriously laggy.
