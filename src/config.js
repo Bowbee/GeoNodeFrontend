@@ -1,7 +1,7 @@
 const config = {
 	verbose: false,
 	socket: {
-		url: 'http://c865-122-59-169-171.ngrok.io'
+		url: 'http://localhost:3002'
 	},
 	buttons: {
 		useWebsocket: true,
